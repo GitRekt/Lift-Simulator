@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Lift Mechanics Simulator</title>
+    <link rel="stylesheet" type="text/css" href="css/main.css" />
+  </head>
+  <body>
+    <div class="container" id="input-form">
+      <h1>Lift Mechanics Simulator</h1>
+      <div class="form-group">
+        <label for="floors">Number of Floors:</label>
+        <input
+          type="number"
+          id="floors"
+          min="1"
+          placeholder="Enter the number of floors"
+          required
+        />
+      </div>
+      <div class="form-group">
+        <label for="lifts">Number of Lifts:</label>
+        <input
+          type="number"
+          id="lifts"
+          min="1"
+          placeholder="Enter the number of lifts"
+          required
+        />
+      </div>
+      <button type="submit" onclick="startSimulation()">
+        Start Simulation
+      </button>
+    </div>
+    <div id="sim-area" style="display: none">
+    </div>
+    <script src="js/main.js"></script>
+  </body>
+</html>

@@ -1,0 +1,153 @@
+/* Add your custom CSS styles here */
+
+body {
+  font-family: Arial, sans-serif;
+}
+
+.container {
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 10px;
+  justify-content: center;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+input[type='number'] {
+  width: 100%;
+  padding: 8px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+button {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  background-color: #03b301;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+#sim-area {
+  margin-top: 5rem;
+}
+
+.up-button {
+  background-color: #03b301;
+  color: black;
+  margin: 5px;
+}
+
+.down-button {
+  background-color: #f9ba00;
+  color: black;
+  margin: 5px;
+}
+
+#lift-controls {
+  display: grid;
+  justify-content: left;
+}
+
+#lift-buttons {
+  width: 10vw;
+}
+
+.floor {
+  margin: 20px;
+  display: flex;
+}
+
+#floor-label {
+  display: flex;
+}
+
+#floor-number {
+  margin: 0;
+}
+
+#lift-area{
+  display: flex;
+}
+
+hr {
+  width: 80vw;
+}
+
+/* Keyframe animation for opening the lift */
+@keyframes liftOpen {
+  0% {
+    height: 0;
+  }
+  100% {
+    height: 100%;
+  }
+}
+
+/* Keyframe animation for closing the lift */
+@keyframes liftClose {
+  0% {
+    height: 100%;
+  }
+  100% {
+    height: 0;
+  }
+}
+
+/* Styling for the lift container */
+.lift {
+  width: 200px;
+  height: 300px;
+  background-color: #f00 !important;
+  position: fixed;
+  top: 50px;
+  right: 50px;
+  z-index: 9999;
+}
+
+/* Styling for the lift door */
+.lift .door {
+  width: 50%;
+  height: 100%;
+  background-color: #ccc;
+  position: absolute;
+  top: 0;
+  transition: width 0.5s;
+}
+
+/* Styling for the left door */
+.lift .door.left {
+  left: 0;
+}
+
+/* Styling for the right door */
+.lift .door.right {
+  right: 0;
+}
+
+/* Animation for opening the lift */
+.lift.open .door {
+  animation: liftOpen 1s forwards;
+}
+
+/* Animation for closing the lift */
+.lift.close .door {
+  animation: liftClose 1s forwards;
+}
+
+.lifts{
+  display: flex;
+}
