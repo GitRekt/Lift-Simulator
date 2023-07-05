@@ -38,8 +38,8 @@ function populateSimulationArea(floors) {
     currFloor.setAttribute('id', floorNo);
     currFloor.classList.add('floor');
     innerHTMLMarkup = `
-    <div id="floor">
-        <div id="lift-area">
+    <div>
+        <div id="lift-area${level}">
             <div id="lift-buttons">`;
     if (i == 0) {
       innerHTMLMarkup += `<button id=down${currLevel} class="down-button">DOWN</button>`;
@@ -72,15 +72,14 @@ function generateLifts(lifts) {
     let liftNo = `Lift-${i}`;
     const currLift = document.createElement('div');
     currLift.setAttribute('id', liftNo);
-    currLift.classList.add('lifts');
+    currLift.classList.add('lift');
     currLift.innerHTML = `
-          <p style="margin:15px;">Lift${i + 1}</p>
+          <p>Lift${i + 1}</p>
           <div class="gate gateLeft" id="L${i}left_gate"></div>
           <div class="gate gateRight" id="L${i}right_gate"></div>
       `;
-    currLift.style.left = `${(i + 1) * 90}px`;
-    currLift.style.top = '0px';
-    document.getElementById('lift-area').appendChild(currLift);
+    currLift.style.left = `${(i + 1) * 10}rem`;
+    document.getElementById('lift-area1').appendChild(currLift);
     currLiftPositionArr[i] = 0;
 
     const currliftDetail = {};

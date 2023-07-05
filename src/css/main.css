@@ -49,12 +49,14 @@ button {
   background-color: #03b301;
   color: black;
   margin: 5px;
+  width: 5rem;
 }
 
 .down-button {
   background-color: #f9ba00;
   color: black;
   margin: 5px;
+  width: 5rem;
 }
 
 #lift-controls {
@@ -68,15 +70,12 @@ button {
 
 .floor {
   margin: 20px;
-  display: flex;
+  width: 100%;
 }
 
 #floor-label {
   display: flex;
-}
-
-#floor-number {
-  margin: 0;
+  justify-content: space-between;
 }
 
 #lift-area{
@@ -109,13 +108,17 @@ hr {
 
 /* Styling for the lift container */
 .lift {
-  width: 200px;
-  height: 300px;
+  width: 5rem;
+  height: 5rem;
+  left:10rem;
   background-color: #f00 !important;
-  position: fixed;
   top: 50px;
   right: 50px;
   z-index: 9999;
+}
+[id*="lift-area"]{
+  display:flex;
+  justify-content: space-between;
 }
 
 /* Styling for the lift door */
